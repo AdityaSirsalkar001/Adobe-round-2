@@ -1,0 +1,4695 @@
+{
+  "title": "Untitled Document",
+  "outline": [
+    {
+      "level": "H2",
+      "text": "I Wish I Would Have Loved This One, But I Didn\u2019t \u2013 A Multilingual Dataset",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "for Counterfactual Detection in Product Reviews",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "James O\u2019Neill\u2021\u2217",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "James.O-Neill@liverpool.ac.uk",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Polina Rozenshtein\u2020,\u2217",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "prrozens@amazon.co.jp",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Ryuichi Kiryo\u2020",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "kiryor@amazon.co.jp",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Motoko Kubota\u2020",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "kubmotok@amazon.co.jp",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Danushka Bollegala\u2020,\u2021",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "danubol@amazon.com",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Amazon\u2020, University of Liverpool\u2021",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Abstract",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "1",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Introduction",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Counterfactual statements are an essential tool of",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "human thinking and are often found in natural lan-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "guages. Counterfactual statements may be identi-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "\ufb01ed as statements of the form \u2013 If p was true, then",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "q would be true (i.e. assertions whose antecedent",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "(p) and consequent (q) are known or assumed to",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "be false) (Milmed, 1957). In other words, a coun-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "terfactual statement describes an event that may",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "not, did not, or cannot take place, and the subse-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "quent consequence(s) or alternative(s) did not take",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "place. For example, consider the counterfactual",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "statement \u2013 I would have been content with pur-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "chasing this iPhone, if it came with a warranty!.",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Counterfactual statements can be broken into two",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "parts: a statement about the event (if it came with a",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "warranty), also referred to as the antecedent, and",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "the consequence of the event (I would have been",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "content with purchasing this iPhone), referred to",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "as the consequent. Counterfactual statements are",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "ubiquitous in natural language and have been well-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "studied in \ufb01elds such as philosophy (Lewis, 2013),",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "psychology (Markman et al., 2007; Roese, 1997),",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "linguistics (Ippolito, 2013), logic (Milmed, 1957;",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Quine, 1982), and causal inference (H\u00a8o\ufb02er, 2005).",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Accurate detection of counterfactual statements",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "is bene\ufb01cial to numerous applications in natural",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "language processing (NLP) such as in medicine",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "(e.g., clinical letters), law (e.g., court proceedings),",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "sentiment analysis, and information retrieval. For",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "example, in information retrieval, counterfactual",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "detection (CFD) can potentially help to remove ir-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "relevant results to a given query. Revisiting our",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "previous example, we should not return the iPhone",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "in question for a user who is searching for iPhone",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "with warranty because that iPhone does not come",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "with a warranty. A simple bag-of-words retrieval",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "model that does not detect counterfactuals would",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "return the iPhone in question because all the to-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "iPhone, with, warranty)",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "kens in the query (i.e.",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "occur in the review sentence. Detecting counter-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "factuals can also be a precursor to capturing causal",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "inferences (Wood-Doughty et al., 2018) and inter-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "actions, which have shown to be effective in \ufb01elds",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "such as health sciences (H\u00a8o\ufb02er, 2005). Janocko",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "et al. (2016) and Son et al. (2017) studied CFD in",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "social media for automatic psychological assess-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "ment of large populations.",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "CFD is often modelled as a binary classi\ufb01ca-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "tion task (Son et al., 2017; Yang et al., 2020a). A",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "manually annotated sentence-level counterfactual",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "dataset was introduced in SemEval-2020 (Yang",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "et al., 2020a) to facilitate further research into this",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "important problem. However, successful devel-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "opments of classi\ufb01cation methods require exten-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "sive high quality labelled datasets. To the best",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "of our knowledge, currently there are only two",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "labelled datasets for counterfactuals: (a) the pio-",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "S",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "L",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "C",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "X",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "neering small dataset of tweets (Son et al., 2017)",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "and (b) a recent larger corpus covering the area of",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "the \ufb01nance, politics, and healthcare domains (Yang",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "et al., 2020a). However, these datasets are limited",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "to the English language.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "In this paper, we contribute to this emerging line",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "of work by annotating a novel CFD dataset for a",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "new domain (i.e. product reviews), covering lan-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "guages in addition to English, such as Japanese",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "and German, ensuring a balanced representation",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "of counterfactuals and the high quality of the la-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "belling. Following prior work, we model coun-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "terfactual statement detection as a binary classi\ufb01-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "cation problem, where given a sentence extracted",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "from a product review, we predict whether it ex-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "presses a counterfactual or a non-counterfactual",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "statement. Speci\ufb01cally, we annotate sentences se-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "lected from Amazon product reviews, where the",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "annotators provided sentence-level annotations as",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "to whether a sentence is counterfactual with respect",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "to the product being discussed. We then represent",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "sentences using different encoders and train CFD",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "models using different classi\ufb01cation algorithms.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "The percentage of sentences that contain a coun-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "terfactual statement in a random sample of sen-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "tences has been reported to be low as 1-2% (Son",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "et al., 2017). Therefore, all prior works annotat-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "ing CFD datasets have used clue phrases such as I",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "wished to select candidate sentences that are likely",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "to be true counterfactuals, which are then subse-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "quently annotated by human annotators (Yang et al.,",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "2020a). However, this selection process can poten-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "tially introduce a selection bias towards the clue",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "phrases used.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "To the best of our knowledge, while the data se-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "lection bias is a recognised problem in other NLP",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "tasks (e.g., Larson et al. (2020)), this selection bias",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "on CFD classi\ufb01ers has not been studied previously.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Therefore, we train counterfactual classi\ufb01ers with",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "and without masking the clue phrases used for can-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "didate sentence selection. Furthermore, we exper-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "iment with enriching the dataset with sentences",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "that do not contain clue phrases but are semanti-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "cally similar to the ones that contain clue phrases.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Interestingly, our experimental results reveal that",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "compared to the lexicalised CFD such as bag-of-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "words representations, CFD models trained using",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "contextualised masked language models such as",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "BERT are robust against the selection bias (Devlin",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "et al., 2019). Our contributions in this paper are as",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "follows:",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "First-ever Multilingual Counterfactual Dataset:",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "We introduce the \ufb01rst-ever multilingual CFD",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "dataset containing manually labelled product re-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "view sentences covering English, German, and",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Japanese languages.1 As already mentioned above,",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "counterfactual statements are naturally infrequent.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "We ensure that the positive (i.e. counterfactual)",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "class is represented by at least 10% of samples for",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "each language. Distinguishing between a counter-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "factual and non-counterfactual statements is a fairly",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "complex task even for humans. Unlike previous",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "works, which relied on crowdsourcing, we employ",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "professional linguists to produce a high quality an-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "notation. We follow the de\ufb01nition of counterfac-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "tuals used by Yang et al. (2020a) to ensure that",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "our dataset is compatible with the SemEval-2020",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "CFD dataset (SemEval). We experimentally verify",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "that by merging our dataset with the SemEval CFD",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "dataset, we can further improve the accuracies of",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "counterfactual classi\ufb01ers. Moreover, applying ma-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "chine translation on the English CFD dataset to",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "produce multilingual CFD datasets results in poor",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "CFD models, indicating the language-speci\ufb01city",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "of the problem that require careful manual annota-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "tions.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Accurate CFD Models: Using the annotated",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "dataset we train multiple classi\ufb01ers using (a) lex-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "icalised word-order insensitive bag-of-words rep-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "resentations as well as (b) contextualised sentence",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "embeddings. We \ufb01nd that there is a clear advan-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "tage to using contextualised embeddings over non-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "contextualized embeddings, indicating that coun-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "terfactuals are indeed context-sensitive.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "2 Related Work",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Counterfactuals have been studied in various con-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "texts such as for problem solving (Markman et al.,",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "2007), explainable machine learning (Byrne, 2019),",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "advertisement placement (Joachims and Swami-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "nathan, 2016) and algorithmic fairness (Kusner",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "et al., 2017). Kaushik et al. (2020) proposed an",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "annotation scheme whereby the original data is",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "augmented in a counterfactual manner to overcome",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "spurious associations that a classi\ufb01er heavily relies",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "upon, thus failing to perform well on test data dis-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "tributions that are not identical. Unlike Kaushik",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "et al. (2020) and closely related work by Gardner",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "et al. (2020), we are interested in identifying exist-",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "ing counterfacts and \ufb01ltering these statements to",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "improve search performance.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "A CFD task was presented in SemEval-2020",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Challenge (Yang et al., 2020b). The provided",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "dataset contains counterfactual statements from",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "news articles. However, the dataset does not cover",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "counterfactuals in e-commerce product reviews,",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "which is our focus in this paper. One of the ear-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "liest CFD datasets was annotated by Son et al.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "(2017) and covers counterfactual statements ex-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "tracted from social media. Both datasets are la-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "belled for binary classi\ufb01cation by crowdsourcing",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "and contain only sentences in English. We will",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "compare our dataset to these previous works in",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "\u00a7 3.4. To summarise, our dataset is unique as it con-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "tains counterfactuals in multiple languages, covers",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "a new application area of e-commerce reviews, and",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "provides high quality annotations.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "A range of CFD methods was recently proposed",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "in response to the SemEval-2020 challenge (Yang",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "et al., 2020b). Most of the high performing meth-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "ods (Ding et al., 2020; Fajcik et al., 2020; Lu et al.,",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "2020; Ojha et al., 2020; Yabloko, 2020) use state-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "of-the-art pretrained language models (Devlin et al.,",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "2019; Liu et al., 2019; Lan et al., 2020; Radford",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "et al., 2019; Yang et al., 2019). Traditional ML",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "methods, such as SVM and random forests were",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "also used but with less success (Ojha et al., 2020).",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "To achieve the best prediction quality, ensem-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "ble strategies are employed. The top performing",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "systems use an ensemble of transformers (Ding",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "et al., 2020; Fajcik et al., 2020; Lu et al., 2020),",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "while others include Convolutional Neural Net-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "works (CNNs) with Global Vectors (GloVe; Pen-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "nington et al., 2014) embeddings (Ojha et al., 2020).",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Various structures are used on top of transformers.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "For example, Lu et al. (2020); Ojha et al. (2020)",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "use a CNN as the top layer, while Bai and Zhou",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "(2020) use a Bi-GRUs and Bi-LSTMs. Some other",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "proposed methods use additional modules, such as",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "constituency and dependency parsers, in the lower",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "layers of the architecture (Yabloko, 2020).",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "CFD datasets tend be highly imbalanced because",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "counterfactual statements are less frequent in natu-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "ral language texts. Prior work has used techniques",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "such as pseudo-labelling (Ding et al., 2020) and",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "multi sample dropout (Chen et al., 2020) to address",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "the data imbalance and over\ufb01tting problems.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "3 Dataset Curation",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "We adopt the de\ufb01nition of a counterfactual state-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "ment proposed by Janocko et al. (2016) where they",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "de\ufb01ne it as a statement which looks at how a hy-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "pothetical change in past experience could have",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "affected the outcome of that experience. Their de\ufb01-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "nition is based on linguistic structures of 6 types of",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "counterfactuals as following.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Conjunctive Normal: The antecedent is fol-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "lowed by the consequent. The antecedent consists",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "of a conditional conjunction followed by a past",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "tense subjunctive verb or past modal verb. The",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "consequent contains a past or present tense modal",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "verb. (Example: If everyone got along, it would be",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "more enjoyable.)",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Conjunctive Converse: The consequent is fol-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "lowed by the antecedent. The consequent consists",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "of a modal verb and past or present tense verb. The",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "antecedent consists of a conditional conjunction",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "followed by a past tense subjunctive verb or past",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "tense modal. (Example: I would be stronger, if I",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "had lifted weights.)",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Modal Normal: The antecedent is followed by",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "the consequent. The antecedent consists of a modal",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "verb and past participle verb. The consequent con-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "sists of a past/present tense modal verb. (Example:",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "We should have gone bowling, that would have",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "been better.)",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Wish/Should Implied: The antecedent",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "is",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "present, the consequent is implied. The antecedent",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "is the independent clause following \u2018wish\u2019 or",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "\u2018should\u2019. The consequent is implied and can be",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "paraphrased as \u201cwould be better off\u201d. (Examples: I",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "wish I had been richer. I should have revised my",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "rehearsal lines.)",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Verb Inversion: No speci\ufb01c order of the an-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "tecedent and consequent. The antecedent uses the",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "subjunctive mood by inverting the verbs \u2018had\u2019 and",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "\u2018were\u2019 to create a hypothetical conditional state-",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "ment along with a past tense verb. The consequent",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "consists of a modal verb and past or present tense",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "verb. (Example: Had I listened to your advice, I",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "may have got the job.)",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Modal Propositional, Would/Could Have:",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "The consequent is followed by the antecedent. The",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "antecedent consists of a past/present modal verb.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "The consequent consists of a prepositional phrase",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "(Examples: I would have",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "(only certain types).",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "been better off not reading this. I would have been",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "happier without John.)",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Note that, while Yang et al. (2020a) explicitly",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "mention only 5 types of counterfactual and Son",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "et al. (2017) work with 7 types, their de\ufb01nitions",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "and clue words used for data collection effectively",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "cover the same 6 types de\ufb01ned by Janocko et al.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "(2016). We worked with professional linguists",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "to extend these counterfactual de\ufb01nitions for the",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "German and Japanese languages. While the ex-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "tension of the de\ufb01nition from English to German",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "is relatively straightforward, the extension to syn-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "tactically and orthographically different structure",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "of Japanese sentences was challenging (Jacobsen,",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "2011) and required re-writing the annotation guide-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "lines including additional examples. The annota-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "tion guidelines are included in the dataset release.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "3.1 Data Collection",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "The main step of data collection in the previous",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "works (Son et al., 2017; Yang et al., 2020a) is",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "\ufb01ltering of the data using a pre-compiled list of",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "clue words/phrases. Because the exact list of clue",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "phrases used by Janocko et al. (2016) was not pub-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "licly available, we created a new list of clue phrases",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "following the de\ufb01nitions of counterfactual types.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "In addition, we compiled similar clue phrase lists",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "for German and Japanese languages. Yang et al.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "(2020a) applied a more complex procedure, where",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "they match Part of Speech (PoS)-tagged sentences",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "against lexico-syntactic patterns. In our work, we",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "do not consider PoS-based patterns, which are dif-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "\ufb01cult to generalise across languages.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "We use the Amazon Customer Reviews Dataset,2",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "which contains over 130 million customer reviews",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "collected and released by Amazon to the research",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "community. To create an annotated dataset, we",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "select reviews in different categories as detailed",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "in the Supplementary. Next, we sample candidate",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "sentences for annotation in two iterations.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "In the \ufb01rst iteration, we consider reviews writ-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "ten by customers with a veri\ufb01ed purchase (i.e., the",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "customer has bought the product about which he or",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "she is writing the review). Given that counterfac-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "tual statements are infrequent, all prior works (Son",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "et al., 2017; Yang et al., 2020a) have used clue",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "phrase lists for selecting data for human annota-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "tion. Following this practice, we select sentences",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "that contain exactly one clue phrase from our pre-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "compiled clue phrase lists for each language. We",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "remove sentences that are exceedingly long (more",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "than 512 tokens) or short (less than 10 tokens).",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Shorter sentences might not contain suf\ufb01cient in-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "formation for a human annotator to decide whether",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "it is a counterfactual statement, whereas longer",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "sentences are likely to contain various other infor-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "mation besides counterfactuals.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "The above-mentioned \ufb01rst iteration might pro-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "duce a biased dataset in the sense that all sentences",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "contain counterfactual clues from the prede\ufb01ned",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "lists. There are two possible drawbacks in this se-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "lection method. First, the manually compiled clue",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "phrase lists might not cover all the different ways in",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "which we can express a counterfactual in a particu-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "lar language. Therefore, the sentences selected us-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "ing the clue phrase lists might have coverage issues.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Second, a counterfactual classi\ufb01cation model might",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "assign high con\ufb01dence scores for some high preci-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "sion clue phrases (e.g., \u201cwish\u201d for English). Such",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "a classi\ufb01er is likely to perform poorly on test data",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "that do not use clue phrases for expressing coun-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "terfactuality. On the contrary, adding sentences",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "with no clue words to the dataset might result in a",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "greater bias: those additional sentences are likely",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "to be negative examples, and thus discriminatory",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "power of the clue phrases can get ampli\ufb01ed. Later",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "in our experiments, we empirically evaluate the",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "effect of selection bias due to the reliance on clue",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "phrases.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "To address the selection bias, in addition to the",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "sentences selected in the \ufb01rst iteration, we conduct",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "a second iteration where we select sentences that do",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "not contain counterfactual clues from our lists. For",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "this purpose, we create sentence embeddings for",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "each sentence selected in the \ufb01rst iteration. We use",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "a pretrained multilingual BERT model3. We then",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "use k-means clustering to cluster these sentences",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "into k = 100 clusters. We assume each cluster rep-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "resents some aspect of a product, and represented",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "by its centroid. Next, we pick sentences that do not",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "contain the clue phrases, compute their sentence",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "embeddings, and measure the similarity to each of",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "the centroids. For each centroid we select the top n",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "most similar sentences for manual annotation. We",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "set n such that we obtain an approximately equal",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "number of sentences to the number of sentences",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "that contain clue phrases selected in the \ufb01rst itera-",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "tion. All selected sentences are manually annotated",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "for counterfactuality as described in \u00a7 3.2.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "3.2 Annotation",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The annotators were provided guidelines with de\ufb01-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "nitions, extensive examples and counterexamples.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Brie\ufb02y, counterfactual statements were identi\ufb01ed",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "if they belong to any of the counterfactual types",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "described in \u00a7 3. If any part of a sentence con-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "tains a counterfactual, then we consider the entire",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "sentence to be a counterfactual. This annotation",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "process increases the number of counterfactual ex-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "amples and the coverage across the counterfactual",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "types in the dataset, thereby improving the class",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "imbalance. We require that at least 90% of the sen-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "tences have agreement of 2 professional linguists",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "(2 out of 2 agreement), the rest at most 10% cases",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "had a third linguist to resolve the disagreement (2",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "out of 3 agreement).",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "3.3 Dataset Statistics",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The basic dataset statistics can be found in Table 1.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "We present two versions of the English dataset:",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "EN contains only sentences \ufb01ltered by the clue",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "words, EN-ext is a superset of EN enriched by",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "sentences with no clue words as described above.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The clue-based dataset EN contains about 1/5-th",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "of positive examples, while its extended version",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "contains 1/10-th of counterfactuals. Only 76 out",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "of 4977 added sentences were labelled positively.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "DE dataset contains 69.1% and JP contains 9.5%",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "of counterfactuals.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "The summary of clue phrase distributions in pos-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "itive and negative classes is shown in Table 2. In-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "terestingly, English and German lists have approx-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "imately the same number of clues, but the preci-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "sion for German clues is much higher, resulting",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "in more counterfactual statements being extracted",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "using those clue phrases. On the contrary, the",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Japanese list has the largest number of clues, yet",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "results in the lowest precision. The speci\ufb01cation",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "of counterfactual clue phrases for Japanese is a lin-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "guistically hard problem because the meaning of",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "the clues is highly context dependent. The large",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "number of Japanese clue phrases is due to the or-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "thographic variations present in Japanese where the",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "same phrase can be written using kanji, hiragana,",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "katakana characters or a mixture of them. Because",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "we were able to select a suf\ufb01ciently large datasets",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "for German and Japanese using the clue phrases,",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "we did not consider the second iteration step de-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "scribed in \u00a7 3.1 for those languages.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "3.4 Comparison with Existing Datasets",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "We compare the multilingual counterfactual dataset",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "we create against existing datasets in Table 3. Our",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "dataset is well-aligned with the two other existing",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "datasets in the sense that we use the same de\ufb01nition",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "of a counterfactual, keep a similar percentage of",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "positive examples, and use similar keywords for",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "dataset construction. These properties ensure that",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "our dataset of product reviews can be used on its",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "own, as well as organically combined with the ex-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "isting datasets from other domains. A distinctive",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "feature of our dataset is its coverage of a novel",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "domain, e-commerce reviews, which is not cov-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "ered by any of the existing counterfactual datasets.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Furthermore, our dataset is available for three lan-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "guages: English, German, and Japanese. This is the",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "\ufb01rst counterfactual dataset not limited to English",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "language. Unlike previous works, which relied on",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "crowdsourcing, we employ professional linguists",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "to produce the lists of clue words and supervise",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "the annotation. This ensures the high quality of the",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "labelling.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "4 Evaluations",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "We conduct a series of experiments to systemati-",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "cally evaluate several important factors related to",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "counterfactuality such as (a) selection bias due to",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "clue phrases (\u00a7 4.1), (b) effect of merging multiple",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "counterfactual datasets (\u00a7 4.2), (c) use of machine",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "translation (MT) to translate counterfactual state-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "ments (\u00a7 4.3), and (d) effect of different sentence",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "encoders and classi\ufb01ers for training CFD models",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "(\u00a7 4.4).",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "For evaluations in (a), (b), and (c), we \ufb01ne-tune a",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "widely used multilingual transformer model BERT",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "(mBERT) (Devlin et al., 2019) to train a CFD",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "model. The model is pretrained for the tasks of",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "masked language modelling and next sentence pre-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "diction for 104 languages4 and is used with the de-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "fault parameter settings. The model is implemented",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "using the Transformer.5 library We \ufb01ne-tune a lin-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "ear layer on top of these pretrained language mod-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "els for the CFD task using the training process as",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "described next.6",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "We use an 80%-20% train-test data split and tune",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "hyperparameters via 5-fold cross-validation. Hy-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "perparameters in the already pretrained transformer",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "models are kept \ufb01xed. F1, Matthew\u2019s Correlation",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Coef\ufb01cient (MCC; Boughorbel et al., 2017), and",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "accuracy are used as evaluation metrics. MCC",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "(\u2208 [\u22121, 1]) accounts for class imbalance and incor-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "porates all correlations within the confusion ma-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "trix (Chicco and Jurman, 2020). Accuracy may be",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "misleading in highly imbalanced datasets because a",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "simple classi\ufb01cation of all instances to the majority",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "class has a high accuracy. However, for consis-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "tency with prior work, we report all three evalua-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "tion metrics in this paper. All the reported results",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "are averaged over at least 3 independently trained",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "models initialised with the same hyperparameter",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "values. For tokenisation, unless the tokeniser is pre-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "man languages; and MeCab8 as the morphological",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "analyser for Japanese.",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "4.1 Selection Bias due to Clue Phrases",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "To evaluate the effectiveness of clue phrases for se-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "lecting sentences for human annotation and any",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "selection bias due to this process, we \ufb01ne-tune",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "mBERT with and without masking the clue phrases.",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Classi\ufb01cation performance values are shown in Ta-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "ble 4. Overall, we see that no mask (training with-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "out masking) returns slightly better performance",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "than mask (training with masking), however the",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "differences are not statistically signi\ufb01cant. This",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "is reassuring because it shows that the sentence",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "embeddings produced by mBERT generalise well",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "beyond the clue phrases used to select sentences",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "for manual annotation. On the other hand, if a",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "CFD model had simply memorised the clue phrases",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "and was classifying based on the occurrences of",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "the clue phrases in a sentence, we would expect",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "a drop in classi\ufb01cation performance in no mask",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "setting due to over\ufb01tting to the clue phrases that",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "are not observed in the test data. Indeed for EN",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "where all sentences contain clue phrases, we see a",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "slight drop in all evaluation measure for no mask",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "relative to mask, which we believe is due to this",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "over\ufb01tting effect. The performance on JP is the",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "lowest among all languages compared. This could",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "be attributed to the tokenisation issues and lack of",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Japanese coverage in mBERT. Many counterfac-",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "tual clues in Japanese are parts of verb/adjective",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "in\ufb02ections, which can get split/removed during the",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "tokenisation.",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Table 5 shows recall (R) and precision (P ) on",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "masked (subscript m) and non-masked (subscript",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "nm) settings. In all datasets the recall is higher than",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "precision for both masked and non-masked ver-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "sions due to dataset imbalance with an underrepre-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "sented positive class. The number of positive exam-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "ples misclassi\ufb01ed under masked and non-masked",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "settings are typically very small. We see that the",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "CFD model trained on EN-ext has a higher recall,",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "but lower precision than the one on EN . Most of",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "the added examples in EN-ext are negatives, which",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "makes it hard to maintain a high precision.",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "4.2 Cross-Dataset Adaptation",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "To study the compatibility of our dataset with exist-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "ing datasets, we train a CFD model on one dataset",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "and test the trained model on a different dataset.",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Prior work on domain adaptation (Ben-David et al.,",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "2009) has shown that the classi\ufb01cation accuracy of",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "such a cross-domain classi\ufb01er is upper-bounded by",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "the similarity between the train and test datasets.",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Further, we merge our EN-ext dataset with the",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "SemEval dataset (Yang et al., 2020a) to create a",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "dataset denoted by Comb . Speci\ufb01cally, we sepa-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "rately pool the the counterfactual and noncounter-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "factual instances in each dataset to create Comb .",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "As can be seen from Table 6, the models trained",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "on EN and EN-ext perform poorly on SemEval ,",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "while the model trained on SemEval has relatively",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "high values of F1, MCC, and Accuracy on EN and",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "EN-ext. This implies that the product reviews we",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "use cover a narrow subdomain compared to the do-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "mains in SemEval . Interestingly, the CFD model",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "trained on Comb reports the best performance",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "across all measures, indicating that our dataset is",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "compatible with SemEval and can be used in con-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "junction with existing datasets to train better CFD",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "models.",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "4.3 Cross-Lingual Transfer via MT",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Considering the costs involved in manually anno-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "tating counterfactual statements for each language,",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "a frugal alternative would be to train a model for",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "English and then apply it on test sentences in a tar-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "get language of interest, which are translated into",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "English using a machine translation (MT) system.",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "To evaluate this possibility, we \ufb01rst translate the",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "German and Japanese CFD datasets into English",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "(denoted respectively by DE-EN and JP-EN ) using",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Amazon MT.9 Next, we train separate English CFD",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "models using EN , EN-ext and SemEval datasets,",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "and apply those models on DE-EN and JP-EN .",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "As shown in Table 7, the MCC values for the MT-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "based CFD model are signi\ufb01cantly lower than that",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "for the corresponding in-language baseline, which",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "is trained using the target language data. Therefore,",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "simply applying MT on test data is not an alter-",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "native to annotating counterfactual datasets from",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "scratch for a novel target language. This result",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "shows the importance of developing counterfactual",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "datasets for languages other than English, which",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "has not been done prior to this work. Moreover,",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "the performance for German, which belongs to",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "the same Germanic language group as English, is",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "better than for Japanese. The model trained on Se-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "mEval performs the worst on DE-EN dataset, and",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "has the lowest MCC on JP-EN . This experimental",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "result indicates the importance of introducing new",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "languages to the counterfactual dataset family.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "4.4 Sentence Encoders and Classi\ufb01ers",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "We evaluate the effect of the sentence encoding and",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "binary classi\ufb01cation methods on the performance",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "of CFD using multiple settings.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Bag-of-N-grams (BoN): We represent a sen-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "tence using tf-idf weighted unigrams and bi-grams",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "and ignore n-grams with a frequency less than 2 or",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "more than 95% of the frequency distribution. Next,",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Principal Component Analysis (PCA; Wold et al.,",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "1987) is used to create 600-dimensional sentence",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "embeddings.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Word Embeddings (WE): We average the 300-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "dimensional fastText embeddings trained on Com-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "mon Crawl and Wikipedia10 for the words in a",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "sentence to create its sentence embedding. We",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "note that there have been meta-embedding meth-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "ods (Bollegala and Bao, 2018; Bollegala et al.,",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "2018) proposed to combine multiple word embed-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "dings to further improve their accuracy. However,",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "their consideration for CFD is beyond the scope of",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "current work.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "BoN and WE representations are used to train",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "binary CFD models using different classi\ufb01cation",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "methods such as a Support Vector Machine (SVM;",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Cortes and Vapnik, 1995) with a Radial Basis func-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "tion, an ID3 Decision Tree (DT; Breiman et al.,",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "1984), a Random Forest (RF; Breiman, 2001) with",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "20 trees.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Pretrained Language Models Along with",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "mBERT, we \ufb01ne-tune a linear layer for CFD task",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "on top of two following pretrained transformer",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "models: XLM model (Conneau and Lample,",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "2019)11 and base XLM-RoBERTa model (Con-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "neau et al., 2020).12 Both models were trained for",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "the task of masked language modelling for 100",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "languages.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Results Here we extend our experiment with clue",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "word masking. For the transformer-based models",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "we mask the clue words similar to mBERT. For the",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "traditional ML methods we remove the clue words",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "from the sentences before tokenization.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "The results with and without masking are re-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "ported in Table 8 (F1 and Accuracy are reported in",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "the Supplementary). First, we note that masking",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "decreases the performance of all classi\ufb01ers on all",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "datasets. Transformer-based classi\ufb01ers are the least",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "affected by masking: they are able to learn seman-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "tic dependencies from the remaining text. We could",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "also say that transformers are the least affected by",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "the data-selection bias as they do not rely on the",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "clue words. Traditional ML methods with BoN fea-",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "tures are affected by masking the most: they seem",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "to use clue words for discrimination. Interestingly,",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "for these methods the performance drops equally",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "for clue-based EN and enriched EN-ext datasets.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "This could indicate that in both cases the classi\ufb01er",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "relies on the clue words.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Overall transformer-based models (especially",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "XLM-RoBERTa) perform the best across all dat-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "sets except for JP . For JP the best performance",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "is obtained by an SVM model with BoN fea-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "tures. This could indicate that for Japanese, a",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "language-speci\ufb01c tokenisation works for the lex-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "icalised (BoN) models better than the language-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "independent subtokenisation methods such as Byte",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Pair Encoding (BPE; Sennrich et al., 2016) that",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "are used when training contextualised transformer-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "based sentence encoders. The former preserves",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "more information than the latter at the expense of",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "a sparser and larger feature space (Bollegala et al.,",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "2020). Transformer-based masked language mod-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "els on the other hand require subtokenisation as",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "they must use a smaller vocabulary to make the",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "token prediction task ef\ufb01cient (Yang et al., 2018;",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Li et al., 2019).",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "In general, unlike the simpler word embedding",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "and bag of words approaches, large pretrained con-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "textualized embeddings maintain high test perfor-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "mance according to the reported evaluation met-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "rics. We note that these also converged after a few",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "epochs using a relatively small number of labelled",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "instances, based on the model with the best 5-fold",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "validation accuracy. Hence, contextualized em-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "beddings can identify various context-dependent",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "counterfactuals from a diverse range of reviews",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "using a small number of mini-batch gradient up-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "dates of a single linear layer. Among the different",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "sentence embedding methods compared, the best",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "performance is reported by XLM-RoBERTa.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Between the two baselines, we see that using",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "word embeddings to represent the sentences does",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "not offer clear bene\ufb01ts for traditional ML meth-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "ods and BoN features are suf\ufb01cient. However, em-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "bedding based methods suffer generally a smaller",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "performance drop when clues are masked. This",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "suggests that embeddings provide a more general",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "and robust representation of counterfactuals in the",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "semantic space than BoN features.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "tion performance, indicating the need for language-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "speci\ufb01c CFD datasets.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "6 Ethical Considerations",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "In this work, we annotated a multilingual dataset",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "covering counterfactual statements. Moreover, we",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "train CFD models using different sentence represen-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "tation methods and binary classi\ufb01cation algorithms.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "In this section, we discuss the ethical considera-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "tions related to these contributions.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "With regard to the dataset being released, all sen-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "tences that are included in the dataset were selected",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "from a publicly available Amazon product review",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "dataset. In particular, we do not collect or release",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "any additional product reviews as part of this paper.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Moreover, we have manually veri\ufb01ed that the sen-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "tences in our dataset do not contain any customer",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "sensitive information. However, product reviews",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "do often contain subjective opinions, which can",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "sometimes be socially biased. We do not \ufb01lter out",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "any such biases.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "We use two pretrained sentence encoders,",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "mBERT and XLM-RoBERTa, when training the",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "CFD models. It has been reported that pretrained",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "masked language model encode unfair social biases",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "such as gender, racial and religious biases (Bom-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "masani et al., 2020). Although we have evalu-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "ated ourselves the mBERT and XLM-RoBERTa",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "based CFD models that we use in our experiments,",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "we suspect any social biases encoded in these pre-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "trained masked language models could propagate",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "into the CFD models that we train. In particular,",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "these social biases could be further ampli\ufb01ed dur-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "ing the CFD model training process, if the counter-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "factual statements in the training data also contain",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "such biases. Debiasing masked language models",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "is an active research \ufb01eld (Kaneko and Bollegala,",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "2021) and we plan to evaluate the social biases in",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "CFD models in our future work.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "5 Conclusion",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "References",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "We annotated a multilingual counterfactual dataset",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "using Amazon product reviews for English, Ger-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "man and Japanese languages. Experimental re-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "sults show that our English dataset is compatible",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "with the previously proposed SemEval-2020 Task",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "5 dataset. Moreover, the CFD models trained using",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "our dataset are relatively robust against selection",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "bias due to clue phrases. Simply applying MT",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "on test data results in poor cross-lingual classi\ufb01ca-",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Supplementary Materials",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "A Fine-tuned multilingual BERT for",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "counterfactual classi\ufb01cation",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Given that we select mBERT (Devlin et al., 2019)",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "as the main classi\ufb01cation method in the paper, we",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "describe how the original BERT architecture is",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "adapted for \ufb01ne-tuned for CF classi\ufb01cation.",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Consider a dataset D = {(Xi, yi)}m",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "D and a sample s := (X, y) where the sentence",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "X := (x1, . . . xn) with n being the number of",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "words x \u2208 X. We can represent a word as an input",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "embedding xw \u2208 Rd, which has a corresponding",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "target vector y. In the pre-trained transformer mod-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "els we use, Xi is represented by 3 types of embed-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "dings; word embeddings (Xw \u2208 Rn\u00d7d), segment",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "embeddings (Xs \u2208 Rn\u00d7d) and position embed-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "dings (Xp \u2208 Rn\u00d7d), where d is the dimensionality",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "of each embedding matrix. The self-attention block",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "in a transformer mainly consists of three sets of pa-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "rameters: the query parameters Q \u2208 Rd\u00d7l, the key",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "parameters K \u2208 Rd\u00d7l and the value parameters",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "V \u2208 Rd\u00d7o. For 12 attention heads (as in BERT-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "base), we express the forward pass as follows:",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "\u2212\u2192",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "softmax(cid:0)\u2212\u2192",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "\u2212\u2192",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "(cid:77)",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "\u2212\u2192",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Z :=",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "\u2212\u2192Z = Feedforward(LayerNorm(",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "\u2190\u2212Z = Feedforward(LayerNorm(",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "\u2212\u2192",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Z +",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "\u2190\u2212",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Z +",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "\u2212\u2192",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "X ))",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "\u2190\u2212",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "X ))",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "(1)",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "(2)",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "(3)",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "(4)",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "\u2190\u2212Z (cid:76) \u2212\u2192",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "The last hidden representations of both direc-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "tions are then concatenated Z(cid:48) :=",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "projected using a \ufb01nal linear layer W \u2208 Rd fol-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "lowed by a sigmoid function \u03c3(\u00b7) to produce a",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "probability estimate \u02c6y, as shown in (5). As in the",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "original BERT paper, WordPiece embeddings (Wu",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "et al., 2016) are used with a vocabulary size of",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "30,000. Words from (step-3) that are used for \ufb01l-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "tering the sentences are masked using a [PAD]",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "token to ensure the model does not simply learn to",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "correctly classify some samples based on the asso-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "ciation of these tokens with counterfacts. A linear",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "layer is then \ufb01ne-tuned on top of the hidden state,",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "ken. This \ufb01ne-tunable linear layer is then used to",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "predict whether the sentence is counterfactual or",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "not, as shown in Equation 5, where B \u2282 D is a",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "mini-batch and Lce is the cross-entropy loss.",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "1",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "|B|",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "(cid:88)",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Con\ufb01gurations For the mBERT counterfactual",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "model we use BERT-base, which uses 12 Trans-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "former blocks, 12 self-attention heads with a hid-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "den size of 768. The default size of 512 is used",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "for the sentence length and the sentence represen-",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "tation is taken as the \ufb01nal hidden state of the \ufb01rst",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "[CLS] token. This model is already pre-trained",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "and we \ufb01ne-tune a linear layer W on top of BERT,",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "which is fed to through a sigmoid function \u03c3 as",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "p(c|h) = \u03c3(Wh) where c is the binary class label",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "and we maximize the log-probability of correctly",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "predicting the ground truth label.",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "B Matthews Correlation Coef\ufb01cient",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Unlike metrics such as F1, MCC accounts for class",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "imbalance and incorporates all correlations within",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "the confusion matrix (Chicco and Jurman, 2020).",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "For MCC, the range is [-1, 1] where 1 represents a",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "perfect prediction, 0 an average random prediction",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "and -1 an inverse prediction.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "MCC =",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "tp \u00d7 tn \u2212 fp \u00d7 fn",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "(cid:112)(tp + fp)(tp + fn)(tn + fp)(tn + fn)",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "(6)",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "C Extended version of Table 8",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "We report F1, MCC, and accuracy in Table 9.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "D Examples of Incorrect Predictions",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Table 10 shows examples of misclassi\ufb01cations",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "given by transformer models. The second column",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "indicates which of the remaining transformer mod-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "els misclassi\ufb01ed each review where B=mBERT,",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "XR=XLM-RoBERTa, X=XLM without embed-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "ding.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "E Hardware Used",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "All transformer, RNN and CNN models were",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "trained using a GeForce NVIDIA GTX 1070 GPU",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "which has 8GB GDDR5 Memory.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "F Model Con\ufb01guration and",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Hyperparameter Settings",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "BERT-base uses 12 Transformer blocks, 12 self-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "attention heads with a hidden size of 768. The",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "default size of 512 is used for the sentence length",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "and the sentence representation is taken as the \ufb01-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "nal hidden state of the \ufb01rst [CLS] token. A \ufb01ne-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "tuned linear layer W is used on top of BERT-base,",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "which is fed to through a sigmoid function \u03c3 as",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "p(c|h) = \u03c3(Wh) where c is used to calibrate the",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "class probability estimate and we maximize the log-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "probability of correctly predicting the ground truth",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "label.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Table 11 shows the pretrained model con\ufb01gura-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "tions that were already prede\ufb01ned before our ex-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "periments. The number of (Num.) hidden groups",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "here are the number of groups for the hidden lay-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "ers where parameters in the same group are shared.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "The intermediate size is the dimensionality of the",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "feed-forward layers of the the Transformer encoder.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "The \u2018Max Position Embeddings\u2019 is the maximum",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "sequence length that the model can deal with.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "We now detail the hyperparameter settings for",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "transformer models and the baselines. We note that",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "all hyperparameter settings were performed using",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "a manual search over development data.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "F.1 Transformer Model Hyperparameters",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "We did not change the original hyperparame-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "ter settings that were used for the original pre-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "training of each transformer model. The hy-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "perparameter settings for these pretrained mod-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "els can be found in the class arguments python",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "documentation in each con\ufb01guration python \ufb01le",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "and are also summarized in Table 11.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "For \ufb01ne-tuning transformer models, we man-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "ually tested different combinations of a subset",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "of hyperparameters including the learning rates",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "warmup proportion {0, 0.1} and (cid:15) which is a hyper-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "parameter in the adaptive momentum (adam) op-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "timizer. Please refer to the huggingface documen-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "for further details on each speci\ufb01c model e.g",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "for the details of the architecture for BertForSe-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "quenceClassi\ufb01cation pytorch class that is used for",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "our sentence classi\ufb01cation and likewise for the re-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "maining models.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Fine-tuning all language models with a sentence",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "classi\ufb01er took less than two and half hours for all",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "models. For example, for the largest transformer",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "model we used, BERT, the estimated average run-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "time for a full epoch with batch size 16 (of 2, 682",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "training samples) is 184.13 seconds. In the worst",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "case, if the model does not already converge early",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "and all 50 training epochs are carried out, training",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "lasts for 2 hour and 30 minutes.",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "F.2 Baseline Hyperparameters",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "SVM Classi\ufb01er: A radial basis function was",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "used as the nonlinear kernel, tested with an (cid:96)2 reg-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "ularization term settings of C = {0.01, 0.1, 1},",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "while the kernel coef\ufb01cient \u03b3 is autotuned by the",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "scikit-learn python package and class weights are",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "used inversely proportional to the number of sam-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "ples in each class. To calibrate probability esti-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "mates for AUC scores, we use Platt\u2019s scaling (Platt",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "et al., 1999).",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Decision Tree and Random Forest Classi\ufb01ers:",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "We use 20 decision tree classi\ufb01ers with no restric-",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "tion on tree depth and the minimum number of",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "samples required to split an internal node is set",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "to 2. The criterion for splitting nodes is the Gini",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "importance (Gini, 1912).",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "G Further Details on the Datasets",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Review categories represented in the datasets",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "and clue words breakdown: Below we list the",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "breakdown of product categories for each dataset",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "in the format \u201ccategory (total number of review",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "sentences from the category / number of counter-",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "factual examples/ number of non-counterfactual",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "examples)\u201d.",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Dataset EN-ext contains review sentences from",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "4 product categories: Apparel (2500 / 297 / 2203),",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Digital Ebook Purchase (2500 / 287 / 2213), Elec-",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "tronics (2500 / 213 / 2287), Home (2500 / 233 /",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "2267).",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Dataset DE contains review sentences from",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "20 categories: Automotive (47 / 31 / 16), Baby",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "(99 / 80 / 19), Camera (816 / 597 / 219), Dig-",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "ital Ebook Purchase (426 / 259 / 167), Digi-",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "tal Video Download (1297 / 961 / 336), Electronics",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "(7 / 5 / 2), Home Entertainment (94 / 62 / 32), Home",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Improvement (87 / 54 / 33), Kitchen (20 / 10 / 10),",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Lawn and Garden (47 / 34 / 13), Luggage (21 / 9 /",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "12), Music (1297 / 909 / 388), Musical Instruments",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "(162 / 113 / 49), Of\ufb01ce Products (40 / 25 / 15),",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "PC (1297 / 873 / 424), Personal Care Appliances",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "(56 / 36 / 20), Sports (5 / 3 / 2), Toys (378 / 216 /",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "162), Watches (186 / 126 / 60), Wireless (618 / 437",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "/ 181).",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Dataset JP contains review sentences from",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "18 categories: Automotive (191 / 19 / 172),",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Baby (182 / 6 / 176), Camera (490 / 67 / 423),",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Digital Ebook Purchase (490 / 22 / 468), Digi-",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "tal Video Download (490 / 49 / 441), Electronics",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "(490 / 43 / 447), Home (102 / 16 / 86), Home Enter-",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "tainment (227 / 34 / 193), Home Improvement (221",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "/ 29 / 192), Kitchen (221 / 23 / 198), Music (490",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "/ 21 / 469), Musical Instruments (490 / 42 / 448),",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "PC (490 / 61 / 429), Shoes (490 / 52 / 438), Sports",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "(466 / 39 / 427), Toys (490 / 53 / 437), Watches",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "(490 / 37 / 453), Wireless (490 / 54 / 436).",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "The clue phrases for English, German and",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Japanese are shown respectively in Table 13, Ta-",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "ble 14 and Table 15.",
+      "page": 14
+    }
+  ]
+}
